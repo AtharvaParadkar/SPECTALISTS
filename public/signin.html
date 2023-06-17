@@ -19,16 +19,16 @@
             <li><a href="signup.html">Sign Up</a></li> -->
             <li><a href="shop.html">Shop</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
         </ul>
     </div>
  </section>
 
   <section class="container">
     <h1>Sign In</h1>
-    <form>
-      <input type="text" placeholder="Username">
-      <input type="password" placeholder="Password">
+    <form id="signinForm" method="post" action="/api/signin">
+      <input type="text" name="email" required placeholder="email">
+      <input type="password" name="password" required placeholder="Password">
       <button type="submit">Sign In</button>
     </form>
     </br>
@@ -39,6 +39,42 @@
   <footer>
     <p>&copy; 2023 Spectacles and Goggles Store. All rights reserved.</p>
   </footer>
+
+
+  <script>
+    const form = document.getElementById('signinForm');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission
+
+      const formData = new FormData(form);
+      const data = {
+        email: formData.get('email'),
+        password: formData.get('password')
+      };
+
+      // Set custom headers
+      const headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      fetch('http://localhost:5000/api/signin', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(result => {
+        console.log(result);
+        if (result.status == "ok") {
+          console.log("Hello");
+        }
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    });
+  </script>
+
 
 </body>
 </html>
