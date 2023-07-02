@@ -4,27 +4,27 @@ const UserDB = require('../DB/models/user');
 const router = express.Router();
 router.use(express.json());
 
-router.post('/api/signin', async(req, res) => {
+router.post('/api/signin', async (req, res) => {
     console.log(req.body);
-    const {email, password} = req.body;
+    const { email, password } = req.body;
     try {
-        let user = await UserDB.findOne({email});
-        if(!user) {
-            return res.json({status: "Failed!" }).end()
+        let user = await UserDB.findOne({ email });
+        if (!user) {
+            // return res.json({status: "Failed!" }).end();
+            return res.status(400).json({ error: 'Invalid email or password' });
         }
 
-        if(password == user.password) {
-            //res.sendFile(path.join(__dirname, '..', 'public', 'shop.html'));
-            res.render('home', {title: 'express'});
-            return res.json({status: "ok" }).end()
+        if (password === user.password) {
+            // console.log("Hello")
+            return res.json({ status: "ok" });
         }
-        
+        // Password doesn't match
+        return res.status(400).json({ error: 'Invalid email or password' });
+
     } catch (error) {
-        res.json({status: "failed", stat: "aefae"});
+        return res.status(500).json({ error: 'Internal server error' });
     }
-    res.json({status: "failed", stat: "aefae"});
 
 })
 
-
-module.exports =  router;
+module.exports = router;

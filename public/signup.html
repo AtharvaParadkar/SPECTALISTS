@@ -26,7 +26,7 @@
     </div>
   </section>
 
-  <div class="container">
+  <section class="container">
     <h1>Sign Up</h1>
     <form id="signupForm" method="post" action="/api/signup">
       <input type="text" name="username" required placeholder="Username">
@@ -36,7 +36,7 @@
     </form>
     </br>
     <p>Already have an account? <a href="signin.html">Sign In</a></p>
-  </div>
+  </section>
 
   <footer>
     <p>&copy; 2023 Spectacles and Goggles Store. All rights reserved.</p>
@@ -63,9 +63,10 @@
         headers: headers,
         body: JSON.stringify(data)
       })
-        .then(response => response.json())
+        // .then(response => response.json())
         .then(result => {
-          console.log(result);
+          console.log(result.json);
+          window.location.href = "http://localhost:5000/home.html";
         })
         .catch(error => {
           console.error(error);
@@ -73,5 +74,4 @@
     });
   </script>
 </body>
-
 </html>

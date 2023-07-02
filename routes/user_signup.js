@@ -9,7 +9,7 @@ router.post('/api/signup', async(req, res) => {
     const {username, email, password} = req.body;
     try {
         const response  =  await UserDB.create({username, email, password});
-        console.log('hello');
+        // console.log('hello');
         console.log(response);
         if (!response) {
             res.json({status: "failed"});
