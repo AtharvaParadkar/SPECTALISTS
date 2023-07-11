@@ -16,7 +16,7 @@ router.post('/api/signin', async (req, res) => {
 
         if (password === user.password) {
             // console.log("Hello")
-            return res.json({ status: "ok" });
+            return res.json({ status: "ok", data: user });
         }
         // Password doesn't match
         return res.status(400).json({ error: 'Invalid email or password' });
