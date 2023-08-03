@@ -374,60 +374,6 @@ form button:hover {
 }
 
 
-
-/* ------------------------- Shop Ends ------------------------- */
-
-
-
-
-/* ------------------------- Eyeglasses ------------------------- */
-
-h2 {
-
-  text-align: center;
-  font-size: 60px;
-}  
-
-
-
-/* ------------------------- Eyeglasses Ends ------------------------- */
-
-
-/* ------------------------- Cart ------------------------- */
-
-#cartbg{
-  background-color: #c3e1df;
-}
-.cart-container {
-  background-color: #c3e1df;
-}
-.cart-item {
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid black;
-}
-/* .cart-img {
-  width: 200px;
-  height: auto;
-} */
-
-
-
-
-/* ------------------------- Cart Ends ------------------------- */
-
-
-#logout{
-  background-color: #c3e1df;
-  margin-left: 10px;
-}
-
-
-/* ------------------------- Cart Ends ------------------------- */
-
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -469,6 +415,186 @@ h2 {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+
+
+
+
+/* ------------------------- Shop Ends ------------------------- */
+
+
+
+
+/* ------------------------- Eyeglasses ------------------------- */
+
+h2 {
+
+  text-align: center;
+  font-size: 60px;
+}  
+
+
+
+/* ------------------------- Eyeglasses Ends ------------------------- */
+
+
+/* ------------------------- Cart ------------------------- */
+
+/* #cartbg{
+  background-color: #c3e1df;
+} */
+.cart-container {
+  
+
+  margin-bottom: 40px;
+}
+.cart-item {
+  background-color: #c3e1df;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+/* .cart-img {
+  width: 200px;
+  height: auto;
+} */
+
+/*------------------- + - buttons------------*/
+.cart-btn-container {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  margin-block: 0.5rem;
+
+}
+.q-operator {
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  border: none;
+}
+.quantity-container {
+  text-align: center;
+  width: 100%;
+}
+#increment {
+  width: fit-content;
+  border-right: 2px solid black;
+}
+#decrement {
+  width: fit-content;
+  border-left: 2px solid black;
+}
+
+
+
+
+/* ------------------------- Cart Ends ------------------------- */
+
+
+/* ----------------------------Payment Gateway----------------------- */
+
+.wrapper-between {
+  margin-block: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+form div {
+  margin-bottom: 0px;
+}
+.gateway-input {
+  max-width: 250px;
+}
+.gateway-form form div label {
+  display: block;
+}
+.gateway-full {
+  margin-block: 15px;
+  width: 96.5%;
+  max-width: none;
+  margin: 0 auto;
+}
+.gateway-container {
+  height: 412px;
+  width: clamp(500px, 600px, 800px);
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+} 
+.checkout {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gateway-output {
+  max-width: 300px;
+  min-height: 380px;
+  padding-top: 20px;
+  margin: 0 auto;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.output-header {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  background: url("image/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.receipt-text {
+  font-size: 0.95rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 550;
+  text-align: left;
+  line-height: 2rem;
+}
+.output-sub {
+  font-size: 1.4rem;
+  text-decoration: double underline;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+.output-container {
+  padding: 20px 30px;
+  letter-spacing: 0.5px;
+  background-color: #c3e1df;
+}
+.final-price {
+  font-size: 2rem;
+  padding-block: 0.6rem;
+  border-radius: 10px;
+  text-align: center;
+  border-top: 2px dashed black;
+  background-color: #c3e1df;
+
+}
+
+
+/* ----------------------------Payment Gateway ends----------------------- */
+
+
+#logout{
+  background-color: #c3e1df;
+  margin-left: 10px;
+}
+
+
+
 
 footer {
   background-color: #333;
