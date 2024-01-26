@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,7 +113,7 @@
           <div class="feature-item-product">
             <img src="image/10.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Blue Transparent Hexagon</h3>
+          <h3>Blue Transparent Full Rim Hexagon</h3>
           <p>&#8377;1500</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -128,7 +127,7 @@
           <div class="feature-item-product">
             <img src="image/12.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Green Transparent Cat Eye</h3>
+          <h3>Green Transparent Full Rim Cat Eye</h3>
           <p>&#8377;1500</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -148,7 +147,7 @@
           <div class="feature-item-product">
             <img src="image/14.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Maroon Tortoise Cat Eye</h3>
+          <h3>Maroon Tortoise Full Rim Cat Eye</h3>
           <p>&#8377;1500</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -172,7 +171,7 @@
           <div class="feature-item-product">
             <img src="image/16.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Block Phone Computer Glasses</h3>
+          <h3>Blue Block Phone Computer Glasses</h3>
           <p>&#8377;1499</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -196,7 +195,7 @@
           <div class="feature-item-product">
             <img src="image/19.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Blue Computer Glasses</h3>
+          <h3>Blue Block Phone Computer Glasses</h3>
           <p>&#8377;1499</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -206,7 +205,7 @@
           <div class="feature-item-product">
             <img src="image/20.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Rose Gold Hexagonal</h3>
+          <h3>Rose Gold Hexagonal Eyeglasses</h3>
           <p>&#8377;3200</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -216,7 +215,7 @@
           <div class="feature-item-product">
             <img src="image/21.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Pink Transparent Round</h3>
+          <h3>Pink Transparent Round Eyeglasses</h3>
           <p>&#8377;3200</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -230,7 +229,7 @@
           <div class="feature-item-product">
             <img src="image/22.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Grey Transparent Round </h3>
+          <h3>Grey Transparent Round Eyeglasses</h3>
           <p>&#8377;1299</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -273,7 +272,7 @@
           <div class="feature-item-product">
             <img src="image/11.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Purple Full Rim Cat Eye </h3>
+          <h3>Purple Cat Eye Eyeglasse</h3>
           <p>&#8377;1500</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
@@ -283,14 +282,12 @@
           <div class="feature-item-product">
             <img src="image/17.png" alt="Image" class="image-zoom">
           </div>
-          <h3>Gunmetal Silver Square</h3>
+          <h3>Gunmetal Silver Full Rim Square</h3>
           <p>&#8377;4200</p>
           <div class="feature-item-product2">
             <a class="btn add-to-cart">Add to cart</a>
           </div>
         </div>
-
-        <div id="snackbar">Product added to cart</div>
 
   </section>
 
@@ -328,7 +325,6 @@
           signin.classList.remove("hide");
           signup.classList.remove("hide");
           navbar.removeChild(userNameElement);
-          window.location.href = "http://localhost:5000/";
           navbar.removeChild(logout);
         })
         navbar.appendChild(logout);
@@ -337,6 +333,7 @@
         signup.classList.remove("hide");
       }
     });
+
     const addToCart = async (e) => {
       const cartBtn = e.target;
       const imageCard = cartBtn.closest(".feature-item");
@@ -374,7 +371,7 @@
           showSnackbar("Failed to add item to cart");
         }
       } catch (error) {
-        alert("An error occurred while adding the item to the cart.");
+        console.error("An error occurred while adding the item to the cart.");
         showSnackbar("An error occurred while adding the item to the cart");
       }
     };

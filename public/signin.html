@@ -25,8 +25,8 @@
   <section class="container">
     <h1>Sign In</h1>
     <form id="signinForm" method="post" action="/api/signin">
-      <input type="text" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="email">
-      <input type="password" name="password" required minlength="8" placeholder="Password">
+      <input type="text" name="email" required placeholder="email">
+      <input type="password" name="password" required placeholder="Password">
       <button type="submit">Sign In</button>
     </form>
     <div id="errorContainer" style="display: none;">

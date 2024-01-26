@@ -27,40 +27,36 @@
   <section class="features">
     <br>
     <!-- 1 -->
-
     <div class="feature-item">
       <div class="feature-item-product">
-        <img src="image/gog16.png" alt="Image" class="image-zoom">
+        <img src="image/gog1.png" alt="Image" class="image-zoom">
+      </div>
+      <h3>Tortoise Full Rim Wayfarer</h3>
+      <p>&#8377;1299</p>
+
+      <a class="btn add-to-cart">Add to cart</a>
+
+    </div>
+    <div class="feature-item">
+      <div class="feature-item-product">
+        <img src="image/gog2.png" alt="Image" class="image-zoom">
       </div>
       <h3>Blue Full Rim Wayfarer</h3>
       <p>&#8377;1599</p>
-      <div class="feature-item-product2">
-        <a class="btn add-to-cart">Add to cart</a>
-      </div>
+
+      <a class="btn add-to-cart">Add to cart</a>
+
     </div>
     <div class="feature-item">
       <div class="feature-item-product">
-        <img src="image/gog17.png" alt="Image" class="image-zoom">
+        <img src="image/gog3.png" alt="Image" class="image-zoom">
       </div>
-      <h3>Silver Full Rim Aviator</h3>
+      <h3>Silver Full Rim Round</h3>
       <p>&#8377;1599</p>
-      <div class="feature-item-product2">
-        <a class="btn add-to-cart">Add to cart</a>
-      </div>
+
+      <a class="btn add-to-cart">Add to cart</a>
+
     </div>
-    <div class="feature-item">
-      <div class="feature-item-product">
-        <img src="image/gog18.png" alt="Image" class="image-zoom">
-      </div>
-      <h3>Matte Black Full Rim Wayfarer</h3>
-      <p>&#8377;1599</p>
-      <div class="feature-item-product2">
-        <a class="btn add-to-cart">Add to cart</a>
-      </div>
-    </div>
-
-
-
 
 
     <br>
@@ -202,34 +198,35 @@
     <!--6-->
     <div class="feature-item">
       <div class="feature-item-product">
-        <img src="image/gog1.png" alt="Image" class="image-zoom">
-      </div>
-      <h3>Tortoise Full Rim Wayfarer</h3>
-      <p>&#8377;1299</p>
-
-      <a class="btn add-to-cart">Add to cart</a>
-
-    </div>
-    <div class="feature-item">
-      <div class="feature-item-product">
-        <img src="image/gog2.png" alt="Image" class="image-zoom">
+        <img src="image/gog16.png" alt="Image" class="image-zoom">
       </div>
       <h3>Blue Full Rim Wayfarer</h3>
       <p>&#8377;1599</p>
-
-      <a class="btn add-to-cart">Add to cart</a>
-
+      <div class="feature-item-product2">
+        <a class="btn add-to-cart">Add to cart</a>
+      </div>
     </div>
     <div class="feature-item">
       <div class="feature-item-product">
-        <img src="image/gog3.png" alt="Image" class="image-zoom">
+        <img src="image/gog17.png" alt="Image" class="image-zoom">
       </div>
-      <h3>Silver Full Rim Round</h3>
+      <h3>Silver Full Rim Aviator</h3>
       <p>&#8377;1599</p>
-
-      <a class="btn add-to-cart">Add to cart</a>
-
+      <div class="feature-item-product2">
+        <a class="btn add-to-cart">Add to cart</a>
+      </div>
     </div>
+    <div class="feature-item">
+      <div class="feature-item-product">
+        <img src="image/gog18.png" alt="Image" class="image-zoom">
+      </div>
+      <h3>Matte Black Full Rim Wayfarer</h3>
+      <p>&#8377;1599</p>
+      <div class="feature-item-product2">
+        <a class="btn add-to-cart">Add to cart</a>
+      </div>
+    </div>
+
     <br>
 
     <!--7-->
@@ -280,7 +277,7 @@
       <div class="feature-item-product">
         <img src="image/gog23.png" alt="Image" class="image-zoom">
       </div>
-      <h3>Matte Black Grey Wooden Cat Eye</h3>
+      <h3>Matte Black Grey Wooden Full Rim Cat Eye</h3>
       <p>&#8377;999</p>
       <div class="feature-item-product2">
         <a class="btn add-to-cart">Add to cart</a>
@@ -296,8 +293,6 @@
         <a class="btn add-to-cart">Add to cart</a>
       </div>
     </div>
-
-    <div id="snackbar">Product added to cart</div>
 
   </section>
 
@@ -336,7 +331,6 @@
           signin.classList.remove("hide");
           signup.classList.remove("hide");
           navbar.removeChild(userNameElement);
-          window.location.href = "http://localhost:5000/";
           navbar.removeChild(logout);
         })
         navbar.appendChild(logout);
@@ -345,7 +339,6 @@
         signup.classList.remove("hide");
       }
     });
-
     const addToCart = async (e) => {
       const cartBtn = e.target;
       const imageCard = cartBtn.closest(".feature-item");
@@ -378,25 +371,27 @@
         if (data.status === "ok") {
           console.log(data.data);
           showSnackbar("Product added to cart");
-        } else {
-          console.log("Failed to add item to cart.");
-          showSnackbar("Failed to add item to cart");
-        }
-      } catch (error) {
-        alert("An error occurred while adding the item to the cart.");
-        showSnackbar("An error occurred while adding the item to the cart");
-      }
-    };
+                } else {
+                    console.log("Failed to add item to cart.");
+                    showSnackbar("Failed to add item to cart");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("An error occurred while adding the item to the cart.");
+                showSnackbar("An error occurred while adding the item to the cart");
+            }
+        };
 
 
-    const showSnackbar = (message) => {
-      const snackbar = document.getElementById("snackbar");
-      snackbar.textContent = message;
-      snackbar.classList.add("show");
-      setTimeout(() => {
+        const showSnackbar = (message) => {
+    const snackbar = document.getElementById("snackbar");
+    snackbar.textContent = message;
+    snackbar.classList.add("show");
+    setTimeout(() => {
         snackbar.classList.remove("show");
-      }, 3000);
-    };
+    }, 3000);
+};
+
     document.addEventListener("DOMContentLoaded", function () {
       const itemDivs = document.querySelectorAll(".feature-item");
       itemDivs.forEach((item) => {
@@ -406,7 +401,6 @@
     });
 
   </script>
-
 </body>
 
 </html>

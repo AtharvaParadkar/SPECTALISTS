@@ -116,7 +116,7 @@
 
         <div class="feature-item2">
             <img src="image/5-removebg-preview.png" alt="Image" class="image-zoom">
-            <h3>Gold Round Full Rim</h3>
+            <h3>Float Pop</h3>
             <p>&#8377;699</p>
             <div class="feature-item-product2">
                 <a class="button add-to-cart">Add to Cart</a>
@@ -503,7 +503,7 @@
 
     <script src="script.js"></script>
     <script>
-         document.addEventListener('DOMContentLoaded', async () => {
+      document.addEventListener('DOMContentLoaded', async () => {
       const loginData = sessionStorage.getItem("login-data");
       const loginDataObj = JSON.parse(loginData);
       const navbar = document.getElementById("navbar");
@@ -535,7 +535,6 @@
         signup.classList.remove("hide");
       }
     });
-
         const addToCart = async (e) => {
             const cartBtn = e.target;
             const imageCard = cartBtn.closest(".feature-item2");
@@ -581,13 +580,13 @@
 
 
         const showSnackbar = (message) => {
-            const snackbar = document.getElementById("snackbar");
-            snackbar.textContent = message;
-            snackbar.classList.add("show");
-            setTimeout(() => {
-                snackbar.classList.remove("show");
-            }, 3000);
-        };
+    const snackbar = document.getElementById("snackbar");
+    snackbar.textContent = message;
+    snackbar.classList.add("show");
+    setTimeout(() => {
+        snackbar.classList.remove("show");
+    }, 3000);
+};
 
         document.addEventListener("DOMContentLoaded", function () {
             const itemDivs = document.querySelectorAll(".feature-item2");
@@ -598,7 +597,7 @@
         });
 
 
-
+       
 
     </script>
 

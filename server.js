@@ -64,14 +64,14 @@ app.post("/api/updateCartItem", async (req, res) => {
         }
 
         let updatedAmount = cartItem.amount;
-        // console.log(updatedAmount);
+       // console.log(updatedAmount);
         if (operation === "increment") {
             updatedAmount++;
         } else if (operation === "decrement") {
             if (updatedAmount === 1) {
-                const deleteRecord = await cartDB.deleteOne({ _id: cartItemId });
+                const deleteRecord = await cartDB.deleteOne({_id: cartItemId});
                 if (!deleteRecord) {
-                    return res.json({ status: "failed", data: "couldn't remove item from cart" })
+                    return res.json({status: "failed", data: "couldn't remove item from cart"})
                 }
                 return res.json({ status: "ok", data: "success" });
             }
@@ -97,6 +97,9 @@ app.post("/api/updateCartItem", async (req, res) => {
         return res.json({ status: "failed", data: `Internal server Error: ${error}` });
     }
 });
+
+
+
 
 
 app.use("/", signupR);

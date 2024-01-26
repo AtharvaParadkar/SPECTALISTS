@@ -13,8 +13,7 @@ h2 {
 }  
   /* Global styles */
   body {
-    background-color: #c3e1df;
-    font-weight: lighter;
+    background-color: #c3e1df;font-weight: lighter;
     line-height: 1.6;
 }
   
@@ -23,10 +22,9 @@ h2 {
   #header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 80px;
+    justify-content: space-between; padding: 15px 80px;
     background:#c3e1df;
-    /* box-shadow: 0 1px 0px rgba(0, 0, 0, 0.06); */
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.06);
 }
 
 #navbar{
@@ -38,10 +36,11 @@ h2 {
 
 #navbar li {
      list-style: none;
+
      padding: 0 20px;
 }
 
-#navbar li a, .user{
+#navbar li a{
      text-decoration: none;
      font-family:Abril Fatface;
      font-size: 20px;
@@ -50,28 +49,17 @@ h2 {
      transition: 0.3s ease;
 }
 
-.user {
-  font-family: Arial, sans-serif;
-  font-weight: 500;
-}
-
-#navbar li a:hover, 
-#navbar li a.active{
+#navbar li a:hover, #navbar li a.active{
      color:#000000;
 }
 
-#navbar li a.active::after, 
-#navbar li a:hover::after {
+#navbar li a.active::after, #navbar li a:hover::after {
      content:"";
      width: 30%;
      height: 2px;
      background: #6c849d;
      bottom: -4px;
      left: 20px;
-}
-
-.hide {
-  display: none;
 }
 
 .button {
@@ -84,9 +72,7 @@ h2 {
   cursor: pointer;
   border-radius: 4px;
 }
-.button:hover{
-  background-color: #cdf0ed;
-}
+
 
 .btn {
   display: inline-block;

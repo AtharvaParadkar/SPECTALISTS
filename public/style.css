@@ -374,6 +374,60 @@ form button:hover {
 }
 
 
+
+/* ------------------------- Shop Ends ------------------------- */
+
+
+
+
+/* ------------------------- Eyeglasses ------------------------- */
+
+h2 {
+
+  text-align: center;
+  font-size: 60px;
+}  
+
+
+
+/* ------------------------- Eyeglasses Ends ------------------------- */
+
+
+/* ------------------------- Cart ------------------------- */
+
+#cartbg{
+  background-color: #c3e1df;
+}
+.cart-container {
+  background-color: #c3e1df;
+}
+.cart-item {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+/* .cart-img {
+  width: 200px;
+  height: auto;
+} */
+
+
+
+
+/* ------------------------- Cart Ends ------------------------- */
+
+
+#logout{
+  background-color: #c3e1df;
+  margin-left: 10px;
+}
+
+
+/* ------------------------- Cart Ends ------------------------- */
+
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -416,88 +470,25 @@ form button:hover {
   to {bottom: 0; opacity: 0;}
 }
 
-
-
-
-/* ------------------------- Shop Ends ------------------------- */
-
-
-
-
-/* ------------------------- Eyeglasses ------------------------- */
-
-h2 {
-
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
   text-align: center;
-  font-size: 60px;
-}  
-
-
-
-/* ------------------------- Eyeglasses Ends ------------------------- */
-
-
-/* ------------------------- Cart ------------------------- */
-
-/* #cartbg{
-  background-color: #c3e1df;
-} */
-.cart-container {
-  
-
-  margin-bottom: 40px;
-}
-.cart-item {
-  background-color: #c3e1df;
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid black;
-}
-/* .cart-img {
-  width: 200px;
-  height: auto;
-} */
-
-/*------------------- + - buttons------------*/
-.cart-btn-container {
-  width: 100px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  border: 2px solid black;
-  margin-block: 0.5rem;
-
-}
-.q-operator {
-  background-color: transparent;
-  font-size: 1.2rem;
-  padding: 8px 12px;
-  border: none;
-}
-.quantity-container {
-  text-align: center;
+  position: absolute;
+  bottom: 0px;
   width: 100%;
-}
-#increment {
-  width: fit-content;
-  border-right: 2px solid black;
-}
-#decrement {
-  width: fit-content;
-  border-left: 2px solid black;
+  max-height: 400px;
 }
 
-
-
-
-/* ------------------------- Cart Ends ------------------------- */
-
-
-/* ----------------------------Payment Gateway----------------------- */
-
+.h-footer {
+  position: relative;
+}
+/* 
+==========================================
+payment gateway
+==========================================
+*/
 .wrapper-between {
   margin-block: 15px;
   display: flex;
@@ -506,7 +497,7 @@ h2 {
   width: 100%;
 }
 form div {
-  margin-bottom: 0px;
+  
 }
 .gateway-input {
   max-width: 250px;
@@ -515,6 +506,7 @@ form div {
   display: block;
 }
 .gateway-full {
+  
   margin-block: 15px;
   width: 96.5%;
   max-width: none;
@@ -532,7 +524,6 @@ form div {
   width: 80%;
   max-width: 1000px;
   margin: 0 auto;
-  margin-bottom: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -572,7 +563,7 @@ form div {
 .output-container {
   padding: 20px 30px;
   letter-spacing: 0.5px;
-  background-color: #c3e1df;
+  background-color: aliceblue;
 }
 .final-price {
   font-size: 2rem;
@@ -580,33 +571,33 @@ form div {
   border-radius: 10px;
   text-align: center;
   border-top: 2px dashed black;
-  background-color: #c3e1df;
+  background-color: aliceblue;
 
 }
+.cart-btn-container {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  margin-block: 0.5rem;
 
-
-/* ----------------------------Payment Gateway ends----------------------- */
-
-
-#logout{
-  background-color: #c3e1df;
-  margin-left: 10px;
 }
-
-
-
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
+.q-operator {
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  border: none;
+}
+.quantity-container {
   text-align: center;
-  position: absolute;
-  bottom: 0px;
   width: 100%;
-  max-height: 400px;
 }
-
-.h-footer {
-  position: relative;
+#increment {
+  width: fit-content;
+  border-right: 2px solid black;
+}
+#decrement {
+  width: fit-content;
+  border-left: 2px solid black;
 }

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const gatewaySchema = new mongoose.Schema({
+const gatewaySchema =  new mongoose.Schema({
     userID: {
         type: mongoose.Types.ObjectId,
         required: true,
@@ -10,8 +10,8 @@ const gatewaySchema = new mongoose.Schema({
         required: true,
     },
     quantity: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true
     },
     ammount: {
         type: Number,
@@ -21,7 +21,7 @@ const gatewaySchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-}, { collection: 'transactions' })
+}, {collection: 'transactions'})
 
 const model = mongoose.model('gatewaySchema', gatewaySchema);
 module.exports = model;

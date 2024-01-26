@@ -30,15 +30,15 @@
       <h1>Welcome to Spectalists</h1>
       <h3>Something Special for Your Eyes.</h3>
       </br>
-      <a href="#eg" class="btn">Shop Now</a>
+      <a href="shop.html" class="btn">Shop Now</a>
     </div>
   </section>
 
-  <section id="eg" class="features">
+  <section class="features">
     </br>
     </br>
-    <h2>Eyeglasses</h2>
-    <div  class="feature-item">
+    <h2 id="eg">Eyeglasses</h2>
+    <div class="feature-item">
       <div class="feature-item-product">
         <img src="image/img1.png" alt="Image" class="image-zoom">
       </div>
@@ -158,7 +158,6 @@
           signin.classList.remove("hide");
           signup.classList.remove("hide");
           navbar.removeChild(userNameElement);
-          window.location.href = "http://localhost:5000/";
           navbar.removeChild(logout);
         })
         navbar.appendChild(logout);

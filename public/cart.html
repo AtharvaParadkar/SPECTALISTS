@@ -16,12 +16,11 @@
         <a href="home.html"><img src="image/logo.png" class="logo" alt="" width="180" height="50"></a>
         <div>
             <ul id="navbar">
-                <li id="signin"><a href="signin.html">Sign In</a></li>
-                <li id="signup"><a href="signup.html">Sign Up</a></li>
                 <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
             </ul>
         </div>
     </section>
+
 
     <h1 style="text-align: center;text-decoration: underline;">Cart Items</h1>
     <div class="cart-container"></div>
@@ -57,14 +56,15 @@
             cartItems.forEach(item => {
                 const card = document.createElement('div');
                 card.setAttribute("class", "cart-item")
+                console.log(item);
                 card.innerHTML = `
-                <img src="${item.img}g" alt="${item.itemName}" class="cart-img">
+      <img src="${item.img}g" alt="${item.itemName}" class="cart-img">
       <div>
         <br>
         <br>
         <br>
         <h4 class="card-title">${item.itemName}</h4>
-        <p class="card-text cart-text">Price: &#8377;${item.price} </p>
+        <p class="card-text cart-text">Price: ${item.price} &#8377;</p>
         <p>Quantity: </p>
         <div class="cart-btn-container">
             <button class="q-operator" id="increment" onclick="updateQ('increment', '${item["_id"]}')">+</button>
@@ -83,19 +83,19 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Retrieve loginData from sessionStorage
             const loginData = sessionStorage.getItem("login-data");
+
             // Parse loginData JSON string into an object
             const loginDataObj = JSON.parse(loginData);
-            const navbar = document.getElementById("navbar");
-            const signin = document.getElementById("signin");
-            const signup = document.getElementById("signup");
+
             // Check if loginDataObj exists and if user is logged in
             if (loginDataObj) {
                 const userName = loginDataObj.username;
+
+                // Display the userName in the navbar
+                const navbar = document.getElementById("navbar");
                 const userNameElement = document.createElement("span");
                 userNameElement.classList += "user";
                 userNameElement.textContent = `${userName}`;
-                signin.classList.add("hide");
-                signup.classList.add("hide");
                 navbar.appendChild(userNameElement);
                 const logout = document.createElement("button");
                 logout.innerText = "logout";
@@ -105,7 +105,6 @@
                     signin.classList.remove("hide");
                     signup.classList.remove("hide");
                     navbar.removeChild(userNameElement);
-                    window.location.href = "http://localhost:5000/";
                     navbar.removeChild(logout);
                 })
                 navbar.appendChild(logout);
